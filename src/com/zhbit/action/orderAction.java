@@ -45,9 +45,8 @@ public class orderAction extends ActionSupport implements ServletResponseAware{
 		ActionContext context = ActionContext.getContext();  
 		HttpServletRequest request = ServletActionContext.getRequest();  
 		HttpServletResponse response = ServletActionContext.getResponse(); 
-		
-		TBuyer buyer = buyerServer.getSingleBuyer("select *from t_buyer where buyerID=1");
-		/*TBuyer buyer = (TBuyer) context.getSession().get("buyer");*/
+
+		TBuyer buyer = (TBuyer) context.getSession().get("buyer");
 		TSeller seller = (TSeller) context.getSession().get("sellers");
 		
 		
