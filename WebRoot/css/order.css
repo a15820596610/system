@@ -1,0 +1,124 @@
+#content {
+	min-height: 400px;
+	margin:10px 0 0 177px;
+	width:920px;
+	border: 1px solid #DDDDDD;
+	font-size:15px;
+	padding:20px;
+	float:left;
+}
+
+/* wishlist */
+.wishlist-product .table1 {
+	width: 100%;
+	border-collapse: collapse;
+   	background-color: #F4F4F4;
+   	border: 1px solid #BBBBBB;
+	box-shadow: 1px 1px 1px #FFFFFF inset;	
+	
+
+}
+.wishlist-product .cart_item{
+	margin:20px 10px 20px 0;
+   	border: 1px solid #BBBBBB;
+	box-shadow: 1px 1px 1px #FFFFFF inset;
+	width: 100%;
+	float:left;
+}
+
+
+.wishlist-product td {
+	padding: 7px;
+}
+.wishlist-product thead td {
+	color: #4D4D4D;
+	font-weight: bold;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #DDDDDD;
+	
+}
+
+.wishlist-product tbody td {
+	float:left;
+	text-align:center;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+
+.wishlist-product tbody .number s {
+	color: #F00;
+}
+
+
+
+/* --------------∂©µ•ΩÁ√Ê------------------------ */
+
+.table_head{
+	width:100%;
+}
+.shop_{
+	width:20%;
+	text-align: center;
+	vertical-align:middle;
+	float:left;
+	border: 1px solid #DDDDDD;
+}
+
+.shopName{
+
+	float:left;
+	width:10%;
+	text-align:center;
+	vertical-align:middle;
+	border: 1px solid #DDDDDD;
+	
+}
+.shopIntroduce{
+	float:left;
+	width:25%;
+	text-align: center;
+	vertical-align:middle;
+	
+	
+}
+.shop_price{
+	width:7.5%;
+	text-align: center;
+	vertical-align:middle;
+	float:left;
+	border: 1px solid #DDDDDD;
+}
+.shop_number{
+	float:left;
+	width:7.5%;
+	text-align: center;
+	vertical-align:middle;
+	border: 1px solid #DDDDDD;
+	
+}
+
+.shop_allPrice{
+	width:10%;
+	text-align: center;
+	vertical-align:middle;
+	float:left;
+	border: 1px solid #DDDDDD;
+}
+.shop_status{
+	width:10%;
+	text-align: center;
+	vertical-align:middle;
+	float:left;
+	border: 1px solid #DDDDDD;
+}
+.shop_isFinish{
+	width:10%;
+	text-align: center;
+	vertical-align:middle;
+	float:left;
+	border: 1px solid #DDDDDD;
+}
+.cart_item input{
+	float:right;
+}
+

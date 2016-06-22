@@ -1,0 +1,164 @@
+/*以下为全局设置*/
+*{ font-size: 12px; margin: 0px; padding:0px; }
+img{ border: 0px;}
+li{ list-style: none; }
+
+/*以下为指定设置*/
+#top,#bottom,#login,#addTea,#welcome,#managerPage{
+	width: 100%;
+	heigth:100%
+	
+}
+#logo{
+	float: left;
+	margin-top: 30px;
+	width: 200px;
+}
+#logoLink{
+	float: left;
+	width: 650px;
+	margin-top: 20px;
+	text-align: right;
+}
+#welcome{
+	text-align: right;
+	padding-right: 50px;
+}
+#login{
+	height: 420px;
+	padding-top: 100px;
+}
+#managerLeft{
+	float: left;
+	width: 180px;
+	background-color: white;
+}
+ul.managerLeft,li.managerLeftHead{
+	width: 180px;
+}
+ul.managerLeft{
+	height: 400px;
+}
+ul.managerLeft a:VISITED,ul.managerLeft a:LINK{
+	text-decoration: none;
+	color:white;
+}
+ul.managerLeft a:ACTIVE,ul.managerLeft a:HOVER{
+	text-decoration: underline;
+	color:black;
+}
+li.managerLeftHead{
+	padding: 20px;
+	font-weight: bold;
+}
+#addTea,#managerWelcome{
+	padding-top: 50px;
+}
+#managerAllOrders,#addTea,#managerWelcome,#managerTea,#singleOrders,#oneType{
+	float: left;
+	width: 80%;
+	height: 440px;
+	background-color: white;
+}
+ul.singleOrders,ul.singleOrdersTea,ul.singleOrdersFoot{
+	width: 702px;
+	margin-left: 8px;
+	
+}
+ul.singleOrdersTea{
+	margin-left: 18px;
+}
+ul.singleOrdersFoot{
+	margin-left: 18px;
+	background-color: rgb(23,157,244);
+}
+li.singleOrdersFoot{
+	color: white;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+li.sequence,li.ordersNumber,li.ordersUser,li.ordersTime,li.dealOrders,li.teaName,li.teaPress,li.teaPrice,li.teaAmount{
+	float: left;
+	padding-top: 2px;
+	padding-bottom : 2px;
+}
+li.sequence{
+	width: 10%;
+}
+li.ordersNumber,li.teaName{
+	width: 20%;
+}
+li.ordersUser,li.teaPrice{
+	width: 20%;
+}
+li.ordersTime,li.teaPress{
+	width: 20%;
+}
+li.dealOrders,li.teaAmount{
+	width: 20%;
+}
+a.aboutOrders:VISITED ,a.aboutOrders:LINK,a.more:VISITED ,a.more:LINK{
+	text-decoration: none;
+	color:black;
+}
+a.aboutOrders:HOVER ,a.aboutOrders:ACTIVE,a.more:HOVER ,a.more:ACTIVE{
+	text-decoration: underline;
+	color:black;
+}
+a.aboutTea:VISITED ,a.aboutTea:LINK{
+	text-decoration: none;
+	color:blue;
+}
+a.aboutTea:HOVER ,a.aboutTea:ACTIVE{
+	text-decoration: underline;
+	color:blue;
+}
+a.bookName:VISITED ,a.bookName:LINK{
+	text-decoration: none;
+	color:maroon;
+}
+a.teaName:HOVER ,a.teaName:ACTIVE{
+	text-decoration: underline;
+	color:maroon;
+}
+a.more{
+	margin-left: 550px;
+	width: 50px;
+}
+ul.managerTeaUl,ul.singleTeaUl,ul.allTeaUl{
+	width: 650px;
+	margin-left: 20px;
+}
+li.managerTeaHead,li.singleTeaName,li.allTeaHead{
+	width: 700px;
+	background-color: rgb(23,157,244);
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	color:white;
+	font-weight: bold;
+}
+li.managerTeaPicture,li.singleTeaPicture,li.allTeaPicture{
+	width: 140px;
+	float: left;
+	margin-top: 10px;
+}
+li.managerTeaInfor,li.allTeaInfor{
+	width: 210px;
+	float: left;
+	margin-top: 10px;
+	text-align: left;
+	padding-left: 10px;
+}
+li.managerTeaPicture img,li.singleTeaPicture img,li.allTeaPicture img{
+	width: 140px;
+	height: 104px;
+}
+li.singleTeaInfor{
+	width: 560px;
+	float: left;
+	margin-top: 10px;
+	text-align: left;
+	padding-left: 10px;	
+}

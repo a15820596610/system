@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+	
+<struts>
+
+	<package name="default" extends="struts-default">
+
+	
+		<interceptors>
+			<interceptor name="userLoginCheck" class="com.zhbit.interceptor.userLoginCheck">
+			</interceptor>
+		</interceptors>
+		
+		
+
+		
+
+		
+		<action name="registerAction" class="com.zhbit.action.RegisterAction">
+			<result name="success">/login.jsp</result>
+			<result name="input">/register1.jsp</result>
+		</action>
+		
+
+		<action name="loginAction" class="com.zhbit.action.loginAction" method="loginCheck">
+			<result name="input">/login1.jsp </result>
+			<result name="success" type="redirect">/index.jsp</result>		
+		</action>
+		
+		<action name="allOrdersAction" class="com.zhbit.action.allOrdersAction">
+		</action>
+
+		<action name="managerLoginAction" class="com.zhbit.action.loginAction" method="managerLoginCheck">
+			<result name="input">/managerLogin.jsp </result>
+			<result name="success" type="redirect">/manager/managerWelcome.jsp</result>
+		</action>
+		
+		
+		<action name="order"  class="com.zhbit.action.orderAction">
+			<result name="orderMessage">/orderMessage.jsp</result>
+		</action>
+
+		<action name="clear" class="com.zhbit.action.sessionClear">
+		</action>
+		
+
+
+		
+	</package>
+</struts>    
