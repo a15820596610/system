@@ -142,10 +142,11 @@
 									<%
 										if(buyer!=null){
 											out.print("买家用户: "+buyer.getNickName() );
+                				 		 }else{
+											if(seller!=null){
+												out.print("卖家用户: "+seller.getNickName() );
+		            				 		 }
                 				 		 }
-										if(seller!=null){
-											out.print("卖家用户: "+seller.getNickName() );
-	            				 		 }
 									%>
 								</a>
 							</li>

@@ -54,33 +54,50 @@
 </head>
 <body>
  	<header>
-    	<div class="wrap">			
+    	<div class="wrap">
+			
             <div class="logo">
                 <a href="index.jsp"><img src="./images/logo.png" alt=""></a>
             </div>
 
             <div class="menu">
                 <ul>
-                   <%
-                		 if( buyer != null ){
+                	    <%
+                		 if( buyer != null || seller!=null ){
                 		%>	 
                 			<li>
 								<a href="login.jsp">
-									<%=buyer.getUsername()%>
+									<%
+										if(buyer!=null){
+											out.print("买家用户: "+buyer.getNickName() );
+                				 		 }else{
+											if(seller!=null){
+												out.print("卖家用户: "+seller.getNickName() );
+		            				 		 }
+                				 		 }
+									%>
 								</a>
 							</li>
-							<li><a href="login.html">个人信息</a></li>
-							<li><a href="login.html">订单中心</a></li>
-							<li><a href="cart!showAllCart.action" target="_blank">我的购物车</a></li>
+							<li><a href="">个人信息</a></li>
+						<% 
+							if(seller==null){
+							%>
+								<li><a href="cart!showAllCart.action">购物车</a></li>
+							<%
+							}
+							
+						%>
+							
+							
+							<li><a href="order!allOrder.action">订单中心</a></li>
+							<li><a href="clear.action">切换用户</a></li>
                 		 <%
-                		}else{
-                		 %>
-                		 
+                		}
+                	    if( buyer != null && seller!=null ){	
+                		 %>	
                 			<li><a href="login.jsp">点击登录</a></li>
        						<li><a href="register.jsp">点击注册</a></li>
-       						<li><a href="personMessage.jsp">个人信息</a></li>
-							<li><a href="orderMessage.jsp">订单中心</a></li>
-							
+       						
        					 <%
                 		} 
                 	 %>
@@ -119,7 +136,7 @@
 	    		</div>
 	    		<div style="margin:20px 10px 20px 0"">
 	    			数量：&nbsp;&nbsp;&nbsp;&nbsp;
-	    			<input type="number" name="shopAmount" step="1" width="1" min="1" max="50000" value="1" /> 			
+	    			<input type="number" name="shopAmount" step="1" width="1" min="1" max=<%=shop.getShopInventory() %> value="1" /> 			
 	    		</div>
 	    		<div >
 	    			库存：&nbsp;&nbsp;&nbsp;&nbsp;

@@ -46,10 +46,11 @@
 									<%
 										if(buyer!=null){
 											out.print("买家用户: "+buyer.getNickName() );
+                				 		 }else{
+											if(seller!=null){
+												out.print("卖家用户: "+seller.getNickName() );
+		            				 		 }
                 				 		 }
-										if(seller!=null){
-											out.print("卖家用户: "+seller.getNickName() );
-	            				 		 }
 									%>
 								</a>
 							</li>
@@ -88,7 +89,7 @@
             <div class="widget">
                 <ul>
                     <li><a href="greenTea.jsp" class="icon">绿茶</a></li>
-                    <li class="LongJingTea.jsp"><a href="songs.jsp" class="icon">龙井茶</a></li>
+                    <li><a href="LongJingTea.jsp" class="icon">龙井茶</a></li>
                     <li><a href="redTea.jsp" class="icon">红茶</a></li>
                     <li><a href="blackTea.jsp" class="icon">黑茶</a></li>
                     <li><a href="OolongTea.jsp" class="icon">乌龙茶</a></li>
@@ -113,7 +114,7 @@
 			
 				<%
 				  shopDao shopdao = new shopDao();		  
-				  List list = shopdao.query("select *from t_shop where isShow='已上架'");  
+				  List list = shopdao.query("select *from t_shop where isShow='已上架' order by shopPrice");  
 				  Iterator it = list.iterator();
 				  while(it.hasNext()){
 					  
@@ -129,7 +130,7 @@
 		                    <div class="grid_bottom">
 		                    	
 		                    	<div class="grid_bottom_price">
-		                    		¥50
+		                    		¥<%=shop.getShopPrice() %>
 		                    	</div>
 		                    	
 		                    	<font color="black" size="1px">
@@ -172,44 +173,34 @@
 	        </center> -->
         </div>
       </div>
-	   <footer>
+	    <footer>
 	            <div class="wrap">
 	                <div class="about">
 	                    <div class="title">About Us</div>
-	                    <p>中国茶叶历史悠久，各种各样的茶类品种，万紫千红，竟相争艳，犹如春天的百花园，使万里山河分外妖娆。中国名茶就是在浩如烟海诸多花色品种茶叶中的珍品。同时，中国名茶在国际上享有很高的声誉。名茶，有色、香、味、形色、香、味、形色、香、味、形色、香、味、形色、香、味、形色、香、味、形色、香、味、形之分。</p>
-	                </div>
-	                <ul>
-	                    <li class="title">Menu Name</li>
-	                    <li><a href="#">digndan</a></li>
-	                    <li><a href="#">Downloads</a></li>
-	                    <li><a href="#">Uploads</a></li>
-	                    <li><a href="">Contact</a></li>
-	                    <li><a href="#">Support</a></li>
-	                    <li><a href="#">About</a></li>
-	                </ul>
-	                <ul>
-	                    <li class="title">Menu Name</li>
-	                    <li><a href="index.jsp">Home</a></li>
-	                    <li><a href="#">Downloads</a></li>
-	                    <li><a href="#">Uploads</a></li>
-	                    <li><a href="feedback.jsp">Contact</a></li>
-	                    <li><a href="#">Support</a></li>
-	                    <li><a href="#">About</a></li>
-	                </ul>
-	                <ul>
-	                    <li class="title">Menu Name</li>
-	                    <li><a href="index.jsp">Home</a></li>
-	                    <li><a href="#">Downloads</a></li>
-	                    <li><a href="#">Uploads</a></li>
-	                    <li><a href="feedback.jsp">Contact</a></li>
-	                    <li><a href="#">Support</a></li>
-	                    <li><a href="#">About</a></li>
-	                </ul>
-	                <div class="clearFloat"></div>
-	                <center>
-	                	<div class="copy"><p>&copy; 2012 All Rights Reserved | Designed by - <a href="http://w3layouts.com">W3Layouts.com</a></p></div>
-	            	</center>
+	                    <p>中国茶叶历史悠久，各种各样的茶类品种，万紫千红，竟相争艳，犹如春天的百花园，使万里山河分外妖娆。</p>
 	            </div>
+                <ul>
+                    <li class="title">用户</li>
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的购物车</a></li>
+                    
+                </ul>
+                <ul>
+                    <li class="title">商品</li>
+                    <li><a href="greenTea.jsp">绿茶</a></li>
+                    <li><a href="LongJingTea.jsp">龙井茶</a></li>
+                    <li><a href="redTea.jsp">红茶</a></li>
+                    <li><a href="blackTea.jsp">黑茶</a></li>
+                    <li><a href="OolongTea.jsp">乌龙茶</a></li>
+                   
+                </ul>
+                
+                <div class="clearFloat"></div>
+                <center>
+                	<div class="copy"><p>&copy; 2012 All Rights Reserved | Designed by - <a href="">【马煜斌】【李土炎】</a></p></div>
+            	</center>
+            </div>
 	    </footer>
 </body>
 </html>

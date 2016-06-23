@@ -137,7 +137,7 @@ public class orderAction extends ActionSupport implements ServletResponseAware{
 			response.setContentType("text/html;charset=UTF-8");
 			response.setCharacterEncoding("UTF-8");        	
 			PrintWriter out= response.getWriter();
-			out.print("<script>alert('"+orderID+"付款成功')</script>");
+			out.print("<script>alert('付款成功')</script>");
 			out.print("<script>window.location.href='order!allOrder.action'</script>"); 
 			out.flush(); 
 			out.close();

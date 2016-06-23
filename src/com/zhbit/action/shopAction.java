@@ -198,7 +198,10 @@ public class shopAction extends ActionSupport implements ServletResponseAware {
 				response.setContentType("text/html;charset=UTF-8");
 				response.setCharacterEncoding("UTF-8");        	
 				PrintWriter out= response.getWriter();
-				out.println("<script>if( confirm('订单生成成功,接下请问确认付款吗') ){"
+				System.out.println("<script>if( confirm('订单生成成功,接下请问确认付款吗,金额一共为"+shop.getShopPrice()*Integer.parseInt(shopAmount1)+"元') ){"
+						+ "window.location.href='order!orderPay.action?orderID="+orderID+"';}"
+						+ "else{window.location.href='order!allOrder.action';}</script>");
+				out.println("<script>if( confirm('订单生成成功,接下请问确认付款吗,金额一共为"+shop.getShopPrice()*Integer.parseInt(shopAmount1)+"元') ){"
 						+ "window.location.href='order!orderPay.action?orderID="+orderID+"';}"
 						+ "else{window.location.href='order!allOrder.action';}</script>");
 				

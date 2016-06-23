@@ -54,7 +54,6 @@
 		
 		function searchOrder() {
 			var search = document.getElementsByName("search");
-			alert(search[0].value);
 			window.location.href='order!searchContent.action?search='+search[0].value;
 
 		}

@@ -1,4 +1,32 @@
-<%@page import="com.zhbit.entity.TSeller"%>
+  <footer>
+	            <div class="wrap">
+	                <div class="about">
+	                    <div class="title">About Us</div>
+	                    <p>中国茶叶历史悠久，各种各样的茶类品种，万紫千红，竟相争艳，犹如春天的百花园，使万里山河分外妖娆。</p>
+	            </div>
+                <ul>
+                    <li class="title">用户</li>
+                    <li><a href="#">个人信息</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">我的购物车</a></li>
+                    
+                </ul>
+                <ul>
+                    <li class="title">商品</li>
+                    <li><a href="greenTea.jsp">绿茶</a></li>
+                    <li><a href="LongJingTea.jsp">龙井茶</a></li>
+                    <li><a href="redTea.jsp">红茶</a></li>
+                    <li><a href="blackTea.jsp">黑茶</a></li>
+                    <li><a href="OolongTea.jsp">乌龙茶</a></li>
+                   
+                </ul>
+                
+                <div class="clearFloat"></div>
+                <center>
+                	<div class="copy"><p>&copy; 2012 All Rights Reserved | Designed by - <a href="">【马煜斌】【李土炎】</a></p></div>
+            	</center>
+            </div>
+	    </footer><%@page import="com.zhbit.entity.TSeller"%>
 <%@page import="com.zhbit.entity.TShop"%>
 <%@page import="com.zhbit.dao.shopDao"%>
 <%@page import="com.zhbit.entity.TBuyer"%>
